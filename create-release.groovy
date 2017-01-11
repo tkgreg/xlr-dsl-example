@@ -60,33 +60,6 @@ xlr {
           }
         }
       }
-      phase {
-        title "third round"
-        tasks {
-          parallelGroup('pg') {
-            tasks {
-              manual("manual task 1") {
-                description "manual task 1"
-              }
-              script("script task 1") {
-                description "script task 1"
-                script "println 'hello world'"
-              }
-            }
-          }
-          sequentialGroup('sg') {
-            tasks {
-              groovyScript("groovyScript task 1") {
-                description "groovyScript task 1"
-                script 'println "hello world"'
-              }
-              manual("manual task 2") {
-                description "manual task 2"
-              }
-            }
-          }
-        }
-      }
     }
   }
 }
