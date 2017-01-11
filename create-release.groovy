@@ -16,13 +16,6 @@ xlr {
           manual("manual task") {
             description "manual task"
           }
-          createRelease('createRelease task') {
-            description "createRelease task"
-            newReleaseTitle "title of the new release"
-            startRelease false
-            template "Container folder/Sub folder/Template 1" // can be path OR Id
-            releaseTags "tag1", "tag2", "tag2"
-          }
           gate('gate task') {
             description 'gate task'
             conditions {
