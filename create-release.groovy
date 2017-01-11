@@ -4,40 +4,7 @@ xlr {
     variables {
       stringVariable("testVar")
     }
-    phases {
-      phase("First round") {
-        tasks {
-          task {
-            type "xlrelease.ScriptTask"
-            title "script task"
-            description "dynamic script task"
-            script "println 'hello world'"
-          }
-          manual("manual task") {
-            description "manual task"
-          }
-          gate('gate task') {
-            description 'gate task'
-            conditions {
-              condition("my condition 1")
-              condition("my condition 2")
-            }
-            dependencies {
-              dependency {
-                variable 'customVar' // NOTE : Do not use dollar{} syntax here as it would be interpolated by XLR
-              }
-              dependency {
-                target {
-                  release "my release"
-                  phase "my phase"
-                  task "my task"
-                }
-              }
-            }
-          }
-        }
-      }
-      phase("second round") {
+      phase("Example") {
         tasks {
           notification('notification task') {
             description "notification task"
