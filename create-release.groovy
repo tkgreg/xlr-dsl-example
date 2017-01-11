@@ -4,6 +4,7 @@ xlr {
         variables {
             stringVariable("testVar")
         }
+        
         phases {
             phase("Example") {
                 tasks {
